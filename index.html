@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<title>AMD</title>
+	<style type="text/css">
+		* {
+			box-sizing: border-box;
+		}
+		html {
+			font-family: 'Noto Sans KR', sans-serif; 
+			font-size: 5px;
+			line-height: 50px; 
+			background-color: black;
+			scroll-behavior: smooth;
+			}
+		body, h1, h2, h3, h4, p, a, ul, li {
+			margin: 0; 
+			padding: 0; 
+			word-break: keep-all; 
+			color: white; 
+			text-decoration: none;
+		 	list-style:none;
+			}
+		section {overflow: hidden;}
+		h1 {font-size: 9rem; line-height: 16rem; font-weight: 600;}
+		.intro h1 {font-size: 20rem;}
+		.service h1 {font-weight: 500;}
+		.text h1 {font-size: 18rem;}
+		#num h1 {font-size: 15rem; font-family: 'Open Sans', sans-serif; margin-top: 50px;}
+		#num3 h1 {
+			font-size: 7rem; 
+			font-family: 'Open Sans', sans-serif; 
+			}
+		h2 {font-size: 5rem; font-weight: 300; color: lightgray; margin: 10px 0px;}
+		.grid h2 {font-size: 6rem; font-weight: 500; color: white;}
+		p {font-size: 6rem; line-height: 11rem; padding-top: 40px;}
+		.service p {width: 500px;}
+		.grid p {padding-top: 0px; padding-bottom: 50px;}
+		.text p {padding: 0px; margin: 20px 30px;}
+		#num p {font-size: 10rem; font-weight: 500;}
+		a {font-size: 4rem; text-decoration: none; font-style: normal;}
+		.grid a {text-decoration-line: line-through; color: gray; padding-left: 20px;}
+		.grid ul {line-height: 45px; font-size: 3rem;}
+		.divide a {font-size: 6rem; font-weight: 500; color: black;}
+		.row {
+			width: 1200px;
+			display: block; 
+			margin: 0px auto;
+			padding: 10px;
+		}
+		.grid {
+			width: 1200px;
+			display: flex;
+			justify-content: space-between;
+			margin: auto;
+		}
+		.gridl {
+			padding-top: 30px;
+			padding-left: 30%;
+			width: 1200px;
+			display: flex;
+			margin: 0px;
+		}
+		.grid_f {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			margin: auto;
+		}
+		header, .row {
+			margin-bottom: 10px;
+		}
+		nav {
+			position: sticky; 
+			top: 0;
+			z-index: 20;
+			vertical-align: baseline;
+			}
+		.top {
+			width: 100vw; 
+			height: 100vh;
+			background: url('./img/0logokr.svg');
+            background-size: 800px;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+		}
+		.desktop {
+			display: flex;
+			gap: 30px;
+			padding: 10px 0px;
+			background-color: black;
+			border-bottom: solid 1px;
+		}
+		.desktop li{
+			list-style-type: none;
+			display: inline-block;
+			float: right;
+		}
+		.desktop li a {
+			display: block;
+			padding: 10px 10px;
+			align-self: flex-end;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+  			transform-origin: bottom;
+						}
+		.desktop li a:hover {
+			animation-name: bounce;
+  			animation-timing-function: ease;
+		}
+		@keyframes bounce {
+		  0%   { transform: translateY(0); }
+		  50%  { transform: translateY(-30px); }
+		  100% { transform: translateY(0); }
+		}
+		.intro {
+			width: 1030px; 
+			margin: 300px auto;
+				}
+		.col2 { padding-top: 150px; width: 80%;}
+		.service {
+			background-image: url("./img/0_service.jpg");
+			background-repeat: no-repeat;
+      	 	background-size: cover;
+      	 	padding-bottom: 100px;
+		}
+		ul.serviceline {
+			padding-top: 60px;
+			display: flex;
+			gap: 30px;
+			justify-content: space-between;
+		}
+		.serviceline li {
+			font-size: 3.5rem;
+			border: solid 1px;
+			border-radius: 25rem;
+			padding: 0px 40px;
+			}
+		.serviceline li:hover {transition-duration: 0.5s; background-color: white; color: black;}
+		.stag li {
+			width: 165px;
+			margin-top: 90px; 
+			font-size: 2rem;
+			border: solid 1px;
+			border-radius: 25rem;
+			line-height: 30px;
+			padding: 0px 20px;
+			}
+		.pack img { width: 720px;}
+		.divide {
+			display: flex;
+			justify-content: center;
+			gap: 500px;
+			padding: 10px 0px;
+			background-color: white;
+			margin: 80px 0px;
+		}
+		.detail {
+			background-image: url("./img/0detail.jpg");
+			background-repeat: no-repeat;
+      	 	background-size: cover;
+      	 	margin-bottom: 200px;
+		}
+		.text {margin: 50px 0px; text-align: center; font-weight: 500;}
+		.fullimg {
+			width: 1000vw; 
+			height: 70vh;
+			background: url('./img/0below.jpg');
+            background-size: 100%;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+		}
+		#num {text-align: center;}
+		.contents p {width: 400px; font-size: 5rem; margin-top: 50px;}
+		.cal3 img{
+			margin-top: 100px;
+			width: 370px;
+		}
+		.cal3_f img{
+			margin-top: 100px;
+			width: 500px;
+		}
+		.line {
+			border-bottom: solid 1px;
+			width: 100%;
+			height: 100px;
+		}
+		.desktop3 {
+			display: flex;
+			justify-content: center;
+			gap: 300px;
+			padding-bottom: 30px;
+		}
+
+		.sticker {
+			display: flex;
+			gap: 0px;
+		}
+		.mid ul.serviceline {
+			padding-top: 60px;
+			display: flex;
+			gap: 30px;
+			justify-content: center;
+		}
+		.mid {
+			text-align: center;
+			padding: 30px 0px;
+		}
+
+	</style>
+</head>
+<body>
+	<header class="top" id="00">
+		<!-- <img src="0logokr.png" width="60%" style="display: block; margin: 100px auto ;"> -->
+	</header>
+	<nav>
+		<div>
+				<ul class="desktop">
+					<li><a href="#00"><img src ="./img/0logo.png" width="65px"></a></li>
+					<li><a href="#01">/about</a></li>
+					<li><a href="#02">/친절 참견 서비스</a></li>
+					<li><a href="#03">/상품 소개</a></li>
+					<li><a href="#04">/상품 상세 정보</a></li>
+					<li><a href="#05">/주의사항</a></li>
+				</ul>	
+		</div>
+	</nav>
+
+	<section>
+		<div class="row">
+			<div class="col2">
+				<h1 id="01">2022년 3월의 끝자락에 설립된 알모디는<br>하나의 서비스와 세 가지의 상품을 통해 디자이너의 관점을 풀어냅니다. 아, 해도 해도 끝이 없고 똑같은 실수를 반복하게 되는 디자인이란 ! <br>정말 알다가도 모르겠습니다.<br><br>그런데... 나만 힘들었던 것이 아니라면, 나와 같은 사람들을 위해 만들어진 상품이나 서비스가 있다면 얼마나 좋을까요?
+				</h1>
+			</div>
+		</div>
+
+		<div class="intro">
+			<h1>그래서 준비했습니다</h1>
+		</div>
+
+	</section>
+	<section class="service">
+			<div class="row">
+				<h1 id="02">친절 참견 서비스</h1>
+				<h2>디자인 참견 A to Z 상시대기</h2>
+				<p>알모디는 간편한 비대면 서비스를 통해 디자이너의 친절 참견 서비스를 제공합니다. 디자이너의 직접적인 디렉팅이 필요하다면 버튼을 눌러 지금 당장 신청해 주세요. 디자인팀 피드백에서 유리한 응답이 나올 수 있도록 보장해 드리겠습니다.</p>
+
+				<div>
+					<ul class="serviceline">
+						<li>지금 바로 신청하기</li>
+						<li>1초 뒤에 신청하기</li>
+						<li>하루 늦게 신청하기</li>
+						<li>부담 없이 신청하기</li>
+					</ul>
+				</div>
+			</div>
+	</section>
+
+	<section id="03">
+		<div class="grid">
+			<div class="pack"><img src="./img/0_pack.jpg"></div>
+			<div>
+				<div class="stag">
+				<li>오픈기념 할인 이벤트 진행 중</li>	
+				</div>
+				<h2>알모디 패키지라인</h2>
+				<p>17,800원 <a>22,000원</a> </p>
+
+				<ul>• 디자이너 광기 가득 스티커팩<br>• 집착광공 마스킹테이프<br>• ALL IN ONE 배경화면</ul>
+
+				<ul class="serviceline">
+					<li>장바구니 담기</li>
+					<li>구매하기</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div>
+			<ul class="divide" id="04">
+				<li><a href="#04">상품 상세 정보</a></li>
+				<li><a href="#05">주의사항</a></li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="row">
+		<div>
+			<img src="./img/0_talk.svg">
+		</div>
+	</section>
+
+		<section class="detail">
+		<div>
+			<img src="./img/0detail.svg">
+		</div>
+	</section>
+
+	<section class="gridl">
+		<div class="text">
+			<h1>알</h1>
+		</div>
+		<div class="text">
+			<p>고 싶지 않은데 은근 알고 싶은 디자인</p>
+		</div>
+	</section>
+
+	<section class="gridl">
+		<div class="text">
+			<h1>모</h1>
+		</div>
+		<div class="text">
+			<p>르겠는데 같은 말이 반복되니 답답한 마음</p>
+		</div>
+	</section>
+	<section class="gridl">
+		<div class="text">
+			<h1>디</h1>
+		</div>
+		<div class="text">
+			<p>자이너가 보는 시선을 복-붙 하고 싶은</p>
+		</div>
+	</section>
+
+	<section>
+			<div class="intro">
+				<h1>당신을 위한 패키지라인</h1>
+			</div>
+			<div class="fullimg"></div>
+	</section>
+
+	<section class="mid">
+		<div class="row" id="num">
+			<h1>01</h1>
+			<p>디자이너 광기 가득 스티커팩</p>
+		</div>
+		<div class="row">
+			<ul class="serviceline">
+				<li>#디자이너_도움_없인_못_살아</li>
+				<li>#디자인_바로_알기</li>
+				<li>#바로_수정</li>
+			</ul>
+			
+		</div>
+	</section>
+
+
+	<section>
+		<div class="grid">
+			<div class="pack"><img src="./img/0sticker.jpg"></div>
+			<div class="contents">
+				<p>디자이너의 관점을 내 책상에서 바로바로 확인하면서 시각화하고 싶으신가요? 항상 디자인팀에 물어봐도 반복되는 실수를 극복하고 업무 효율을 극대화하고 싶으신가요? 그런 당신에게 가장 적합한 상품! <br><br><br>바로 디자이너의 광기가 가득 담긴 스티커팩입니다.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="grid">
+		<div class="text">
+			<p>디자이너의 광기를 머금고 있는 이 스티커 시리즈는 원색 위주의 컬러를 자랑하며 언제라도 누구라도 어디서라도 볼 수 있도록 제작되었습니다. 총 5가지 종류의 스티커를 살펴본 후 상황에 따라 유용한 스티커를 생활용품에 부착해 보세요! </p>
+		</div>
+	</section>
+
+	<section>
+		<div class="cal3">
+			<ul class="grid">
+				<li>
+					<div id="num3">
+						<img src="./img/0_p1.jpg">
+						<h1 class="desktop3">Step 01</h1>
+					</div>
+				</li>
+				<li>
+					<div id="num3">
+						<img src="./img/0_p2.jpg">
+						<h1 class="desktop3">Step 02</h1>
+					</div>
+				</li>
+				<li>
+					<div id="num3">
+						<img src="./img/0_p2.jpg">
+						<h1 class="desktop3">Step 03</h1>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section class="row">
+		<div>
+			<img class="row" src="./img/0_for_designer.png">
+		</div>
+	</section>
+
+	<section class="row">
+		<div class="line"></div>
+	</section>
+
+	<section class="mid">
+		<div class="row" id="num">
+			<h1>02</h1>
+			<p>집착광공 마스킹 테이프</p>
+		</div>
+		<div class="row">
+			<ul class="serviceline">
+				<li>#집착_하게_만들어_주는</li>
+				<li>#계속_반복하기_말하기_듣기_쓰기</li>
+				<li>#귓속말의_시각화</li>
+			</ul>
+			
+		</div>
+	</section>
+
+	<section class="row">
+		<div>
+			<img class="row" src="./img/0_tape.jpg">
+		</div>
+	</section>
+
+	<section class="grid">
+		<div class="text">
+			<p>집착광공의 마스킹 테이프는 항상 디자이너가 말버릇처럼 하는 말들을 반복적으로 주입합니다! 실제로 시각적 구체화를 진행하면서 모든 규칙의 기본이 되는 것 중 가장 자주 사용하는 말로, 누구라도 접근하기 쉬운 챕터를 구성해 보았습니다</p>
+		</div>
+	</section>
+
+	<section>
+		<div class="cal3">
+			<ul class="grid">
+				<li>
+					<div id="num3">
+						<img src="./img/0_t1.png">
+						<h1 class="desktop3">Type 01</h1>
+						<p class="desktop3">행간넓혀주세요</p>
+					</div>
+				</li>
+				<li>
+					<div id="num3">
+						<img src="./img/0_t2.png">
+						<h1 class="desktop3">Type 02</h1>
+						<p class="desktop3">왼쪽정렬가운데정렬오른쪽정렬</p>
+					</div>
+				</li>
+				<li>
+					<div id="num3">
+						<img src="./img/0_t3.png">
+						<h1 class="desktop3">Type 03</h1>
+						<p class="desktop3">IMG_300dpi_file</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="grid">
+		<div class="text">
+			<p>집착광공의 마스킹 테이프는 항상 디자이너가 말버릇처럼 하는 말들을 반복적으로 주입합니다! 실제로 시각적 구체화를 진행하면서 모든 규칙의 기본이 되는 것 중 가장 자주 사용하는 말로, 누구라도 접근하기 쉬운 챕터를 구성해 보았습니다</p>
+		</div>
+	</section>
+
+	<section class="row">
+		<div class="line"></div>
+	</section>
+
+		<section class="mid">
+		<div class="row" id="num">
+			<h1>03</h1>
+			<p>ALL IN ONE 배경화면</p>
+		</div>
+		<div class="row">
+			<ul class="serviceline">
+				<li>#올인원은_항상_옳다</li>
+				<li>#모든_과정을_나와_함께</li>
+				<li>#언제_어디서든_디지털_기기만_있다면</li>
+			</ul>
+			
+		</div>
+	</section>
+
+	<section class="row">
+		<div>
+			<img class="row" src="./img/0_ill.png">
+		</div>
+	</section>
+
+	<section class="grid">
+		<div class="text">
+			<p>멋짐과 노하우를 동시에 볼 수 있는 배경화면 3종 시리즈입니다!화면에 맞게 설계된 배경화면을 통해 시각적인 재미와 디자인적 코치를 한번에 받아보세요.</p>
+		</div>
+	</section>
+
+	<section>
+		<div class="cal3_f">
+			<ul class="grid_f">
+				<li>
+					<div>
+						<a><img src="./img/Mockup.gif"></a>
+					</div>
+				</li>
+				<li>
+					<div>
+						<img src="./img/0_pad.png">
+					</div>
+				</li>
+				<li>
+					<div>
+						<img src="./img/0_ipho.png">
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="row">
+		<div class="line"></div>
+	</section>
+
+	<section class="mid" id="05">
+		<div class="row" id="num">
+			<h1>CAUTION</h1></div>
+
+	<section class="grid">
+		<div class="text">
+			<p>(주) 알모디의 모든 상품 및 서비스는 구매 후 7일 내 환불 신청 시 전액 환불이 가능합니다.특별히 친절 참견 서비스의 경우 전적으로 참견하는 것이 주 목적인 서비스이기에,사용하신 후 과도한 참견에 대한 환불 사유는 기각 처리됨을 알려드립니다.</p>
+		</div>
+	</section>
+
+	<section>
+		<div>
+			<ul class="divide" id="04">
+				<li><a>Fill your design board</a></li>
+			</ul>
+		</div>
+	</section>
+
+	<section>
+		<div class="cal3">
+			<ul class="grid">
+				<li>
+					<div>
+						<a><img src="./img/0-29.svg"></a>
+					</div>
+				</li>
+				<li>
+					<div>
+						<img src="./img/0-30.svg">
+					</div>
+				</li>
+				<li>
+					<div>
+						<img src="./img/0-31.svg">
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div class="cal3">
+			<ul class="grid">
+				<li>
+					<div>
+						<a><img src="./img/0-32.svg"></a>
+					</div>
+				</li>
+				<li>
+					<div>
+						<img src="./img/0-33.svg">
+					</div>
+				</li>
+				<li>
+					<div>
+						<img src="./img/0-34.svg">
+					</div>
+				</li>
+			</ul>
+		</div>
+				<div class="cal3">
+			<ul class="grid">
+				<li>
+					<div>
+						<a><img src="./img/0-35.svg"></a>
+					</div>
+				</li>
+				<li>
+					<div>
+						<img src="./img/0-36.svg">
+					</div>
+				</li>
+				<li>
+					<div>
+						<img src="./img/0-37.svg">
+					</div>
+				</li>
+				<li>
+					<div>
+						<img src="./img/0-38.svg">
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+<!--	<section class="row">
+		<div>
+			<ul class="sticker">
+				<li><img src="./img/0-29.svg"></li>
+				<li><img src="./img/0-30.svg"></li>
+				<li><img src="./img/0-31.svg"></li>
+			</ul>
+		</div>
+	</section>
+-->
+	<section class="row">
+		<div>
+			<img class="row" src="./img/0_hi.png">
+		</div>
+	</section>
+
+<footer>
+	<div class="mid">
+		<div class="row">
+			<address>
+			<a href="https://instagram.com/yewww.e_studio?utm_medium=copy_link" target="_blank">알모디 Copyright &copy; YEWWW All Rights Reserved</a>
+		</address>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>
+
+
+<!--
+	nav 유튜브 따로 있대요
+

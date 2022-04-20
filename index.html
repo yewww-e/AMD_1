@@ -7,6 +7,9 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 	<title>AMD</title>
@@ -35,6 +38,7 @@
 		.service h1 {font-weight: 500;}
 		.text h1 {font-size: 18rem;}
 		#num h1 {font-size: 15rem; font-family: 'Open Sans', sans-serif; margin-top: 50px;}
+		.divide a {font-family: 'Anton', sans-serif;}
 		#num3 h1 {
 			font-size: 7rem; 
 			font-family: 'Open Sans', sans-serif; 
@@ -182,6 +186,14 @@
 		}
 		#num {text-align: center;}
 		.contents p {width: 400px; font-size: 5rem; margin-top: 50px;}
+		.cal {
+			width: 100%;
+			height: 250px;
+		}
+		.rgb { left:100px; top: 400px;}
+		.cal img {
+			width: 180px;
+		}
 		.cal3 img{
 			margin-top: 100px;
 			width: 370px;
@@ -542,11 +554,11 @@
 	</section>
 
 	<section>
-		<div class="cal3">
+		<div class="cal">
 			<ul class="grid">
 				<li>
 					<div>
-						<a><img src="./img/0-29.svg"></a>
+						<a class="rgb"><img src="./img/0-29.svg"></a>
 					</div>
 				</li>
 				<li>
@@ -559,11 +571,6 @@
 						<img src="./img/0-31.svg">
 					</div>
 				</li>
-			</ul>
-		</div>
-
-		<div class="cal3">
-			<ul class="grid">
 				<li>
 					<div>
 						<a><img src="./img/0-32.svg"></a>
@@ -574,15 +581,15 @@
 						<img src="./img/0-33.svg">
 					</div>
 				</li>
+			</ul>
+		</div>
+				<div class="cal">
+			<ul class="grid">
 				<li>
 					<div>
 						<img src="./img/0-34.svg">
 					</div>
 				</li>
-			</ul>
-		</div>
-				<div class="cal3">
-			<ul class="grid">
 				<li>
 					<div>
 						<a><img src="./img/0-35.svg"></a>
